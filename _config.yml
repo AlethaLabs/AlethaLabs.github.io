@@ -3,10 +3,10 @@
 title: Aletha Labs
 description: A blog about Aletha Labs projects and insights
 baseurl: ""
-url: "http://yourdomain.com"
+url: "http://alethalabs.com"
 
 # Build settings
 markdown: kramdown
 
 # Theme settings
-theme: jekyll-theme-dark-neon
+theme: minima
