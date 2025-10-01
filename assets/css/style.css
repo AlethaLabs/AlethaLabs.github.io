@@ -1,0 +1,110 @@
+/* Aletha Labs - Dark Futuristic Neon Theme */
+
+body {
+  background: #101820;
+  color: #e0e0e0;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+a {
+  color: #08fff1;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover {
+  color: #f72585;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.site-header,
+.site-footer,
+.neon-cyan {
+  background: linear-gradient(90deg, #0f2027 0%, #2c5364 100%);
+  color: #08fff1;
+  text-shadow: 0 0 5px #08fff1, 0 0 10px #08fff1;
+  border-bottom: 2px solid #08fff1;
+  box-shadow: 0 0 18px 3px #08fff1;
+}
+
+.site-header .site-title {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.site-nav {
+  float: right;
+}
+.site-nav a {
+  margin-left: 2rem;
+  color: #08fff1;
+  font-weight: 500;
+}
+.site-nav a:hover {
+  color: #00f6ff;
+}
+
+.hero {
+  text-align: center;
+  padding: 3rem 0 2rem 0;
+  color: #08fff1;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.posts-list {
+  margin-top: 2rem;
+}
+.post-card {
+  background: rgba(20, 24, 36, 0.95);
+  border: 2px solid #08fff1;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  box-shadow: 0 0 24px 0 #08fff166;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.post-card:hover {
+  background: #181d2b;
+  box-shadow: 0 0 36px 0 #00f6ffcc;
+}
+
+.post-meta {
+  color: #00f6ff;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #f72585;
+  font-weight: bold;
+  border-bottom: 1px solid #f72585;
+}
+.read-more:hover {
+  color: #08fff1;
+  border-color: #08fff1;
+}
+
+.page h1, .post h1 {
+  color: #08fff1;
+  text-shadow: 0 0 8px #08fff1;
+}
+
+/* Code blocks */
+pre, code {
+  background: #181d2b;
+  color: #00f6ff;
+  border-radius: 6px;
+  padding: 0.3em 0.6em;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+}

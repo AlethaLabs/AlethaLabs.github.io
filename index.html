@@ -1,0 +1,20 @@
+---
+layout: default
+title: Home
+---
+
+<div class="hero neon-cyan">
+  <h1>Welcome to Aletha Labs</h1>
+  <p>A place to share research in cyber security and programming.</p>
+</div>
+
+<div class="posts-list">
+  {% for post in site.posts %}
+    <div class="post-card neon-cyan">
+      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      <p class="post-meta">{{ post.date | date: "%B %d, %Y" }}</p>
+      <p>{{ post.excerpt }}</p>
+      <a class="read-more" href="{{ post.url }}">Read more →</a>
+    </div>
+  {% endfor %}
+</div>
