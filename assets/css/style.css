@@ -85,6 +85,28 @@ button:hover, .btn:hover {
   margin-bottom: 3rem;
 }
 
+.hero-logo {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-logo-img {
+  height: 120px;
+  width: auto;
+  filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.3));
+  animation: logoGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes logoGlow {
+  from {
+    filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.3));
+  }
+  to {
+    filter: drop-shadow(0 0 30px rgba(0, 230, 255, 0.5));
+  }
+}
+
 .hero h1 {
   font-size: 3.5rem;
   margin-bottom: 1rem;
@@ -215,11 +237,30 @@ button:hover, .btn:hover {
 }
 
 .site-title {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--primary) !important;
   text-transform: uppercase;
   letter-spacing: 2px;
+  text-decoration: none;
+}
+
+.site-logo {
+  height: 40px;
+  width: auto;
+  transition: transform var(--transition), filter var(--transition);
+}
+
+.site-title:hover .site-logo {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 8px var(--primary-glow));
+}
+
+.site-title-text {
+  display: inline-block;
 }
 
 .site-title:hover {
@@ -261,6 +302,19 @@ button:hover, .btn:hover {
   
   .hero {
     padding: 3rem 0 4rem 0;
+  }
+  
+  .hero-logo-img {
+    height: 80px;
+  }
+  
+  .site-logo {
+    height: 32px;
+  }
+  
+  .site-title {
+    font-size: 1.2rem;
+    gap: 0.5rem;
   }
   
   .site-header .container {
