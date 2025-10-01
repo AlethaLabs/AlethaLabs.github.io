@@ -1,12 +1,47 @@
 # Jekyll configuration file
 
 title: Aletha Labs
-description: A blog about Aletha Labs projects and insights
+description: A blog about Aletha Labs projects and insights in cybersecurity and programming
 baseurl: ""
-url: "http://alethalabs.com"
+url: "https://alethalabs.github.io"
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
 
 # Theme settings
-theme: minima
+# theme: minima
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Permalink settings
+permalink: /:year/:month/:day/:title/
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor/
+
+# Collections
+collections:
+  posts:
+    output: true
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
