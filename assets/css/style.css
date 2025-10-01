@@ -92,7 +92,7 @@ button:hover, .btn:hover {
 }
 
 .hero-logo-img {
-  height: 180px;
+  height: 250px;
   width: auto;
   filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.3));
   animation: logoGlow 3s ease-in-out infinite alternate;
@@ -249,7 +249,7 @@ button:hover, .btn:hover {
 }
 
 .site-logo {
-  height: 50px;
+  height: 90px;
   width: auto;
   transition: transform var(--transition), filter var(--transition);
 }
@@ -305,11 +305,11 @@ button:hover, .btn:hover {
   }
   
   .hero-logo-img {
-    height: 120px;
+    height: 180px;
   }
   
   .site-logo {
-    height: 40px;
+    height: 60px;
   }
   
   .site-title {
