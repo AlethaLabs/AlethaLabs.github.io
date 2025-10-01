@@ -5,7 +5,7 @@ _site/
 .jekyll-metadata
 
 # Bundler
-vendor/bundle/
+vendor/
 .bundle/
 Gemfile.lock
 
