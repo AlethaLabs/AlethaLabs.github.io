@@ -94,16 +94,16 @@ button:hover, .btn:hover {
 .hero-logo-img {
   height: 250px;
   width: auto;
-  filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.3));
+  filter: drop-shadow(0 0 9px rgba(0, 212, 255, 0.3));
   animation: logoGlow 3s ease-in-out infinite alternate;
 }
 
 @keyframes logoGlow {
   from {
-    filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.3));
+    filter: drop-shadow(0 0 9px rgba(0, 212, 255, 0.3));
   }
   to {
-    filter: drop-shadow(0 0 30px rgba(0, 230, 255, 0.5));
+    filter: drop-shadow(0 0 18px rgba(0, 230, 255, 0.5));
   }
 }
 
