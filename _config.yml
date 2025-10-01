@@ -1,0 +1,12 @@
+# Jekyll configuration file
+
+title: Aletha Labs
+description: A blog about Aletha Labs projects and insights
+baseurl: ""
+url: "http://yourdomain.com"
+
+# Build settings
+markdown: kramdown
+
+# Theme settings
+theme: jekyll-theme-dark-neon
