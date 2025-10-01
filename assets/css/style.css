@@ -1,7 +1,7 @@
 /* Aletha Labs - Dark Futuristic Neon Theme */
 
 body {
-  background: #101820;
+  background: #131c25;
   color: #e0e0e0;
   font-family: 'Segoe UI', 'Arial', sans-serif;
   margin: 0;
@@ -25,8 +25,7 @@ a:hover {
 }
 
 .site-header,
-.site-footer,
-.neon-cyan {
+.site-footer {
   background: linear-gradient(90deg, #0f2027 0%, #2c5364 100%);
   color: #08fff1;
   text-shadow: 0 0 5px #08fff1, 0 0 10px #08fff1;
