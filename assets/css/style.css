@@ -1,12 +1,16 @@
 /* Aletha Labs - Futuristic Cyber Aesthetic */
 
 :root {
-  --bg-dark: #0a0a0f;      /* obsidian black */
-  --bg-panel: #111118;     /* slightly lighter panel */
-  --primary: #00d4ff;      /* electric blue */
-  --primary-glow: #00e6ff;
-  --text-light: #e6f7ff;   /* near-white with blue tint */
-  --text-muted: #8aa3b0;   /* muted gray-blue */
+  --bg-dark: #1a1a24;      /* softer dark purple-gray */
+  --bg-panel: #252538;     /* slightly lighter panel */
+  --primary: #4aa3ff;      /* softer blue */
+  --primary-glow: #66b3ff;
+  --text-light: #e8eef5;   /* warmer off-white */
+  --text-muted: #9bb0c7;   /* softer muted blue-gray */
+  --accent: #7c3aed;       /* purple accent */
+  --code-bg: #2d2d44;      /* background for code blocks */
+  --code-border: #404057;  /* border for code blocks */
+  --border-color: #363649; /* softer border color */
   --radius: 10px;
   --transition: 0.25s ease;
 }
@@ -38,6 +42,38 @@ a:hover {
   text-shadow: 0 0 8px var(--primary-glow);
 }
 
+/* Inline Code */
+code {
+  background: var(--code-bg);
+  border: 1px solid var(--code-border);
+  border-radius: 4px;
+  padding: 0.2em 0.4em;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  font-size: 0.9em;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+/* Code Blocks */
+pre {
+  background: var(--code-bg);
+  border: 1px solid var(--code-border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: inherit;
+}
+
 /* Buttons */
 button, .btn {
   background: transparent;
@@ -58,15 +94,15 @@ button:hover, .btn:hover {
 /* Panels / Cards */
 .card {
   background: var(--bg-panel);
-  border: 1px solid #1a1a25;
+  border: 1px solid var(--border-color);
   border-radius: var(--radius);
   padding: 1.5rem;
-  box-shadow: 0 0 20px rgba(0, 212, 255, 0.05);
+  box-shadow: 0 0 20px rgba(74, 163, 255, 0.05);
   transition: transform var(--transition), box-shadow var(--transition);
 }
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 0 25px rgba(0, 230, 255, 0.15);
+  box-shadow: 0 0 25px rgba(102, 179, 255, 0.15);
 }
 
 /* Container and Layout */
@@ -81,7 +117,7 @@ button:hover, .btn:hover {
   text-align: center;
   padding: 4rem 0 6rem 0;
   background: linear-gradient(135deg, var(--bg-dark) 0%, #0f0f1a 100%);
-  border-bottom: 1px solid #1a1a25;
+  border-bottom: 1px solid var(--border-color);
   margin-bottom: 3rem;
 }
 
@@ -94,16 +130,16 @@ button:hover, .btn:hover {
 .hero-logo-img {
   height: 170px;
   width: auto;
-  filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.3));
+  filter: drop-shadow(0 0 20px rgba(74, 163, 255, 0.3));
   animation: logoGlow 3s ease-in-out infinite alternate;
 }
 
 @keyframes logoGlow {
   from {
-    filter: drop-shadow(0 0 9px rgba(0, 212, 255, 0.3));
+    filter: drop-shadow(0 0 9px rgba(74, 163, 255, 0.3));
   }
   to {
-    filter: drop-shadow(0 0 18px rgba(0, 230, 255, 0.5));
+    filter: drop-shadow(0 0 18px rgba(102, 179, 255, 0.5));
   }
 }
 
@@ -152,7 +188,7 @@ button:hover, .btn:hover {
 
 .hero-btn.primary:hover {
   background: var(--primary-glow);
-  box-shadow: 0 0 20px rgba(0, 230, 255, 0.4);
+  box-shadow: 0 0 20px rgba(102, 179, 255, 0.4);
   transform: translateY(-2px);
 }
 
@@ -165,14 +201,14 @@ button:hover, .btn:hover {
 .hero-btn.secondary:hover {
   background: var(--primary);
   color: var(--bg-dark);
-  box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+  box-shadow: 0 0 15px rgba(74, 163, 255, 0.3);
 }
 
 /* Featured Content Section */
 .featured-content {
   padding: 4rem 0;
   background: var(--bg-panel);
-  border-top: 1px solid #1a1a25;
+  border-top: 1px solid var(--border-color);
 }
 
 .featured-content h2 {
@@ -191,7 +227,7 @@ button:hover, .btn:hover {
 
 .featured-post-card {
   background: var(--bg-dark);
-  border: 1px solid #1a1a25;
+  border: 1px solid var(--border-color);
   border-radius: var(--radius);
   padding: 1.5rem;
   transition: transform var(--transition), box-shadow var(--transition);
@@ -199,7 +235,7 @@ button:hover, .btn:hover {
 
 .featured-post-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 25px rgba(0, 212, 255, 0.1);
+  box-shadow: 0 6px 25px rgba(74, 163, 255, 0.1);
 }
 
 .featured-post-card h3 {
@@ -253,7 +289,7 @@ button:hover, .btn:hover {
 .view-all-btn:hover {
   background: var(--primary);
   color: var(--bg-dark);
-  box-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
+  box-shadow: 0 0 15px rgba(74, 163, 255, 0.4);
   transform: translateX(4px);
 }
 
@@ -269,7 +305,7 @@ button:hover, .btn:hover {
 /* Post Cards */
 .post-card {
   background: var(--bg-panel);
-  border: 1px solid #1a1a25;
+  border: 1px solid var(--border-color);
   border-radius: var(--radius);
   padding: 2rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
@@ -292,7 +328,7 @@ button:hover, .btn:hover {
 
 .post-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 8px 30px rgba(0, 212, 255, 0.2);
+  box-shadow: 0 8px 30px rgba(74, 163, 255, 0.2);
 }
 
 .post-card:hover:before {
@@ -347,7 +383,7 @@ button:hover, .btn:hover {
 .read-more:hover {
   background: var(--primary);
   color: var(--bg-dark);
-  box-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
+  box-shadow: 0 0 15px rgba(74, 163, 255, 0.4);
   transform: translateX(4px);
 }
 
@@ -355,7 +391,7 @@ button:hover, .btn:hover {
 .site-header {
   background: rgba(10, 10, 15, 0.95);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid #1a1a25;
+  border-bottom: 1px solid var(--border-color);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -414,8 +450,8 @@ button:hover, .btn:hover {
 }
 
 .site-nav a:hover {
-  background: rgba(0, 212, 255, 0.1);
-  box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+  background: rgba(74, 163, 255, 0.1);
+  box-shadow: 0 0 10px rgba(74, 163, 255, 0.3);
 }
 
 /* Responsive Design */
@@ -473,7 +509,7 @@ button:hover, .btn:hover {
   text-align: center;
   padding: 3rem 0 4rem 0;
   background: linear-gradient(135deg, var(--bg-dark) 0%, #0f0f1a 100%);
-  border-bottom: 1px solid #1a1a25;
+  border-bottom: 1px solid var(--border-color);
   margin-bottom: 3rem;
 }
 
@@ -503,7 +539,7 @@ button:hover, .btn:hover {
 
 .blog-post-card {
   background: var(--bg-panel);
-  border: 1px solid #1a1a25;
+  border: 1px solid var(--border-color);
   border-radius: var(--radius);
   padding: 2rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
@@ -526,7 +562,7 @@ button:hover, .btn:hover {
 
 .blog-post-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 8px 30px rgba(0, 212, 255, 0.2);
+  box-shadow: 0 8px 30px rgba(74, 163, 255, 0.2);
 }
 
 .blog-post-card:hover:before {
@@ -557,8 +593,8 @@ button:hover, .btn:hover {
 }
 
 .tag {
-  background: rgba(0, 212, 255, 0.1);
-  border: 1px solid rgba(0, 212, 255, 0.3);
+  background: rgba(74, 163, 255, 0.1);
+  border: 1px solid rgba(74, 163, 255, 0.3);
   color: var(--primary);
   padding: 0.2rem 0.6rem;
   border-radius: 4px;
@@ -612,7 +648,7 @@ button:hover, .btn:hover {
 .read-more-btn:hover {
   background: var(--primary);
   color: var(--bg-dark);
-  box-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
+  box-shadow: 0 0 15px rgba(74, 163, 255, 0.4);
   transform: translateX(4px);
 }
 
