@@ -5,8 +5,6 @@ date: 2025-10-12 08:35:00 +0000
 categories: [networking, rust]
 ---
 
-# Connection Races for Happy Eyes p.1 of 2
-
 ## Part One of Two
 
 This is going to be a two-part series and introduction into the algorithm 'Happy Eyeballs'. In today's post we will be explaining what 'Happy Eyeballs' is, the steps to create the algorithm, and then have some fun programming the first step - which is: Performing asynchronous DNS queries of a given host and displaying the results. For this we will be using rust, and in part two we will be jumping straight into the code and implementing the core functionality of 'Happy Eyeballs'. If you would like to view and test the full implementation before part two of this series, you can check out my [GitHub here](https://github.com/AlethaLabs/happy-eyes)
