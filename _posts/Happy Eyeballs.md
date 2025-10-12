@@ -57,7 +57,7 @@ We will implement the Happy Eyeballs algorithm using the rust programming langua
 
 As with any project in rust, unless you want to reinvent the wheel, you will have some dependencies and these listed below are what we will be using today.
 
-![d296e4c738eb56be2c999a69a1f10d8a.png](../_resources/d296e4c738eb56be2c999a69a1f10d8a.png)
+![d296e4c738eb56be2c999a69a1f10d8a.png](_resources/d296e4c738eb56be2c999a69a1f10d8a.png)
 
 As we move along, we will dive deeper into these crates and I will explain why they are needed in context. These are all amazing projects with many brilliant individuals working on them day and night. Again, it never ceases to amaze me how much work goes into the world of tech, especially opensource tooling! Now lets get to the first step of writing this algorithm.
 
@@ -65,7 +65,7 @@ As we move along, we will dive deeper into these crates and I will explain why t
 
 Lets take a look at some of the imports we will be using to perform asynchronous queries and DNS resolution:
 
-![7ef76ac5dbddfdc2f98fce1703cf7731.png](../_resources/7ef76ac5dbddfdc2f98fce1703cf7731.png)
+![7ef76ac5dbddfdc2f98fce1703cf7731.png](_resources/7ef76ac5dbddfdc2f98fce1703cf7731.png)
 
 - We have the standard networking and time crate
 - We also have a really cool crate called [Hickory Resolver](https://docs.rs/hickory-resolver/latest/hickory_resolver/index.html) that can perform asynchronous, recursive queries to lookup domain names
@@ -73,7 +73,7 @@ Lets take a look at some of the imports we will be using to perform asynchronous
 
 Now we can move onto the function signature and set up some variables:
 
-![18aabcb5fc8517605848e100fcdf0b9f.png](../_resources/18aabcb5fc8517605848e100fcdf0b9f.png)
+![18aabcb5fc8517605848e100fcdf0b9f.png](_resources/18aabcb5fc8517605848e100fcdf0b9f.png)
 
 Here we have the beginning of an async function - `resolve_dns` - that takes in host and port as parameters, this function needs to return - `Vec<SocketAddr>` - from the standard library that holds both the IP and its respective port, along with the time in milliseconds it took to resolve. Fun fact: an unsigned 32 bit integer can hold about 49 days of milliseconds!
 
@@ -118,7 +118,7 @@ We can do this while still retaining concurrency by using:
     - It waits on multiple concurrent branches, returning when the first branch completes, cancelling the remaining branches
     - It is a complex yet brilliant protocol
 
-![5efd5292acc11338fbe9abc85e7b1ab8.png](../_resources/5efd5292acc11338fbe9abc85e7b1ab8.png)
+![5efd5292acc11338fbe9abc85e7b1ab8.png](_resources/5efd5292acc11338fbe9abc85e7b1ab8.png)
 
 Lets take a closer look at what is happening here:
 
@@ -152,7 +152,7 @@ Lets take a closer look at what is happening here:
 - This is to ensure we are still maintaining priority of IPv6 over IPv4, but not too much, that we cause significant delay  
 - We accomplish this by using `tokio::time::sleep()` on line **78**
 
-![47da1941bac8352bab40c4395705d7fc.png](../_resources/47da1941bac8352bab40c4395705d7fc.png)
+![47da1941bac8352bab40c4395705d7fc.png](_resources/47da1941bac8352bab40c4395705d7fc.png)
 
 **Wrapping up `tokio::select!`**
 
@@ -160,13 +160,13 @@ Lets take a closer look at what is happening here:
     - We do that again, with a simple match statement
     - If no error is present, we iterate over, count the results, measure the time in ms and display the output
 
-![e0676aa4306bc233fc7d7dc076ed892a.png](../_resources/e0676aa4306bc233fc7d7dc076ed892a.png)
+![e0676aa4306bc233fc7d7dc076ed892a.png](_resources/e0676aa4306bc233fc7d7dc076ed892a.png)
 
 ***
 **That is the end of the `tokio::select!` block**  
 To wrap up this function, we just need to print the results and check for any errors:
 
-![bd3438eec1b57e73da02fd2ff2fd6e83.png](../_resources/bd3438eec1b57e73da02fd2ff2fd6e83.png)
+![bd3438eec1b57e73da02fd2ff2fd6e83.png](_resources/bd3438eec1b57e73da02fd2ff2fd6e83.png)
 
 To test this - all you need to do is add this function we have created into your main function, but first make sure that you are using the tokio runtime, which we will go into more in part two of this series:
 
@@ -184,7 +184,7 @@ Then run it in from your terminal:
 
 The output will look like this:
 
-![d039626a065ad2269af03ddf4fc23ae5.png](../_resources/d039626a065ad2269af03ddf4fc23ae5.png)
+![d039626a065ad2269af03ddf4fc23ae5.png](_resources/d039626a065ad2269af03ddf4fc23ae5.png)
 
 A couple of notes:
 
@@ -192,7 +192,7 @@ A couple of notes:
 - Also sometimes, IPv4 will finish first, which is why we made the code in a particular manner
 - Below is the output of running this a second time, immediately after the first and you can see that our A query completed before our AAAA query
 
-![1716dd72ab12ee134c515764664e2105.png](../_resources/1716dd72ab12ee134c515764664e2105.png)
+![1716dd72ab12ee134c515764664e2105.png](_resources/1716dd72ab12ee134c515764664e2105.png)
 
 ***
 ## Closing Thoughts
